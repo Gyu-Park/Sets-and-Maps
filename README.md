@@ -8,4 +8,4 @@ Reference: Introduction to Java Programming and Data Structures by Y Daniel Lian
 - LinkedHashSet: values are stored in the order in which the values are inserted into the LinkedHashSet.
 - TreeSet: values are sorted when they are inserted into the TreeSet.
 
-Sets are way efficient than arrayList or LinkedList when checking if a value is in a Set and removing a value.
+Sets are way efficient than arrayList or LinkedList when checking if a value is in a Set and removing values.
