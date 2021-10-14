@@ -34,5 +34,26 @@ public class TestMaps {
         System.out.println("\nThe age for " + "Gyu is " + linkedHashMap.get("Gyu"));
         System.out.println("Display entries in LinkedHashMap");
         System.out.println(linkedHashMap);
+
+        // Count words in lyrics
+        String text = "I do the same thing I told you that I never would "
+                + "I told you I'd change, even when I knew I never could "
+                + "know that I can't find nobody else as good as you"
+                + "I need you to stay, need you to stay, hey (oh)";
+
+        Map<String, Integer> map = new TreeMap<>();
+        String[] words = text.split("[\\s+\\p{P}]"); // \s = whitespace, \p{P} = punctuation
+        for (int i = 0; i < words.length; i++) {
+            String key = words[i].toLowerCase();
+            if (key.length() > 0) {
+                if (!map.containsKey(key)) {
+                    map.put(key, 1);
+                } else {
+                    int val = map.get(key);
+                    map.put(key, ++val);
+                }
+            }
+        }
+        map.forEach((a, b) -> System.out.println(a + "\t\t" + b));
     }
 }
